@@ -407,8 +407,10 @@ ul{ list-style:none; }
   gap:5px;
   width: 26px;
   min-height: 44px;
+  min-width: 44px;
   align-items: center;
   justify-content: center;
+  margin-right: -9px; /* compensate the extra tap-target padding so the bars line up with the content edge below */
 }
 .nav-toggle span{
   height:1.5px; width:100%;
@@ -1082,6 +1084,55 @@ ul{ list-style:none; }
   .use-case-item{ flex-direction: column; gap: 6px; }
 }
 
+/* ---- Mobile hero: full-bleed image on top, centered content below ---- */
+@media (max-width: 860px){
+  .hero{ padding: 128px 0 60px; }
+  .hero-inner{
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .hero-visual{
+    order: -1;
+    width: 100vw;
+    max-width: 100vw;
+    margin: 0 0 32px;
+    /* break out of the padded container so the image runs edge-to-edge */
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    height: min(56vw, 340px);
+  }
+  .hero-visual-frame{
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+    box-shadow: none;
+  }
+  .hero-title, .hero-sub{
+    padding: 0 24px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-actions{
+    justify-content: center;
+    padding: 0 24px;
+    width: 100%;
+    max-width: 420px;
+  }
+  .hero-stats{
+    justify-content: center;
+    padding: 0 24px;
+  }
+  .hero .eyebrow{ justify-content: center; padding: 0 24px; }
+
+  /* the scroll indicator was overlapping the stats row on short mobile
+     viewports — drop it on mobile since there's nothing to signal here */
+  .hero .scroll-indicator{ display: none; }
+}
+
 @media (max-width: 860px){
   .hero{ padding: 130px 0 60px; }
   .features, .about, .products, .projects, .supporters{ padding: 50px 0 80px; }
@@ -1134,6 +1185,19 @@ ul{ list-style:none; }
   .hero-stat-divider{ display: none; }
   .use-case-item{ flex-direction: column; }
   .product-cta-band{ padding: 32px 24px; }
+}
+
+/* ---- Contact / "Get in touch": center everything on mobile ---- */
+@media (max-width: 860px){
+  .contact-grid{
+    text-align: center;
+    justify-items: center;
+  }
+  .contact-copy{ width: 100%; max-width: 480px; }
+  .contact-copy .eyebrow{ justify-content: center; }
+  .contact-address-list{ align-items: center; }
+  .contact-address-block{ width: 100%; }
+  .contact-form{ width: 100%; max-width: 480px; }
 }
 
 @media (max-width: 560px){
