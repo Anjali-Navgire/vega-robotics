@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VEGA ROBOTICS — Autonomous Solar Intelligence</title>
+  <meta name="description"
+    content="VEGA ROBOTICS engineers AI-powered autonomous robots that keep solar plants at peak efficiency.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ============ CUSTOM CURSOR ============ -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ============ SCROLL PROGRESS ============ -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ============ PAGE LOADER / INTRO ============ -->
+  <section class="intro" id="intro" aria-label="Intro sequence">
+    <div class="intro-grid"></div>
+    <div class="intro-particles" id="introParticles"></div>
+
+    <div class="intro-content">
+      <div class="intro-logo-wrap">
+        <div class="intro-logo-ring"></div>
+        <div class="intro-logo-sweep"></div>
+        <div class="intro-logo" id="introLogo">
+          <!-- Add company logo here. Example once you have an image:
+        <img src="assets/logo.png" alt="VEGA Robotics" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
+        -->
+          <span class="intro-logo-mark"><img src="imgs/logo.jpeg" alt="VEGA Robotics"
+              style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></span>
+        </div>
+      </div>
+
+      <p class="intro-eyebrow" id="introEyebrow">INITIALIZING SYSTEM</p>
+
+      <h1 class="intro-title" id="introTitle">
+        <span class="line" data-text="Welcome to the Future">Welcome to the Future</span>
+        <span class="line" data-text="of Solar Automation">of Solar Automation</span>
+      </h1>
+
+      <button class="start-btn" id="startBtn">
+        <span class="start-btn-label">PRESS START</span>
+        <span class="start-btn-ripple"></span>
+        <svg class="start-btn-arrow" width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <path d="M4 9H14M14 9L9.5 4.5M14 9L9.5 13.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </button>
+    </div>
+
+    <div class="intro-footer">
+      <span>VEGA ROBOTICS™</span>
+      <span id="introPercent">00%</span>
+    </div>
+  </section>
+
+  <!-- ============ MAIN SITE ============ -->
+  <div class="site" id="site">
+
+    <!-- Cursor spotlight -->
+    <div class="spotlight" id="spotlight"></div>
+
+    <!-- ============ NAVBAR ============ -->
+    <header class="navbar" id="navbar">
+      <div class="navbar-inner">
+        <a href="#home" class="nav-logo">
+          <span class="nav-logo-icon"><img src="imgs/logo.jpeg" alt="VEGA Robotics" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></span>
+          <span class="nav-logo-text">VEGA<span>ROBOTICS</span></span>
+        </a>
+
+        <nav class="nav-menu" id="navMenu">
+          <a href="#home" class="nav-link active" data-text="Home">Home</a>
+          <a href="#features" class="nav-link" data-text="Features">Features</a>
+          <a href="#about" class="nav-link" data-text="About">About</a>
+          <a href="#products" class="nav-link" data-text="Products">Products</a>
+          <a href="#projects" class="nav-link" data-text="Projects">Projects</a>
+          <a href="#supporters" class="nav-link" data-text="Supporters">Supporters</a>
+          <a href="#contact" class="nav-link" data-text="Contact">Contact</a>
+        </nav>
+
+        <a href="#contact" class="btn btn-cta nav-cta magnetic">
+          <span>Get Started</span>
+        </a>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <main id="mainContent">
+
+      <!-- ============ HERO — plain, no background effects ============ -->
+      <section class="hero" id="home">
+        <div class="hero-inner">
+          <div class="hero-copy" data-reveal>
+            <p class="eyebrow"><span class="eyebrow-dot"></span>AUTONOMOUS SOLAR MAINTENANCE</p>
+            <h1 class="hero-title">
+              Engineering the<br>
+              <span class="text-gradient">Future of Solar</span><br>
+              Cleaning
+            </h1>
+            <p class="hero-sub">
+              Smart robots that clean, inspect, and optimize solar arrays
+              around the clock — so every panel performs at maximum efficiency.
+            </p>
+            <div class="hero-actions">
+              <a href="#products" class="btn btn-primary magnetic">
+                <span>Explore Robot</span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </a>
+              <a href="#about" class="btn btn-ghost magnetic">
+                <span>Our Mission</span>
+              </a>
+            </div>
+
+            <div class="hero-stats">
+              <div class="hero-stat">
+                <span class="hero-stat-num" data-count="99.9">0</span><span class="hero-stat-suffix">%</span>
+                <p>Uptime Reliability</p>
+              </div>
+              <div class="hero-stat-divider"></div>
+              <div class="hero-stat">
+                <span class="hero-stat-num" data-count="24">0</span><span class="hero-stat-suffix">/7</span>
+                <p>Autonomous Operation</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual" data-reveal>
+            <!-- Add Hero Robot Image URL -->
+            <div class="hero-visual-frame">
+              <img src="imgs/robo2.jpeg" alt="VEGA solar cleaning robot" class="hero-robot-img">
+
+            </div>
+          </div>
+        </div>
+
+        <a href="#features" class="scroll-indicator magnetic">
+          <span>SCROLL</span>
+          <span class="scroll-line"><span class="scroll-line-fill"></span></span>
+        </a>
+      </section>
+
+      <!-- ============ FEATURES ============ -->
+      <section class="features" id="features">
+        <div class="section-inner">
+          <div class="section-head" data-reveal>
+            <p class="eyebrow center"><span class="eyebrow-dot"></span>WHY VEGA</p>
+            <h2 class="section-title center">Built for reliability,<br><span class="text-gradient">designed for
+                scale.</span></h2>
+          </div>
+
+          <div class="feature-grid">
+            <div class="feature-card tilt-card" data-reveal>
+              <div class="feature-icon">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                  <path d="M11 2L13 8L19 9L14.5 13L15.7 19.5L11 16.3L6.3 19.5L7.5 13L3 9L9 8L11 2Z"
+                    stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <h3>Eco-Friendly & Cost Efficient</h3>
+              <p>Reduces water usage, manual cleaning requirements, and recurring maintenance costs while helping
+                panels maintain better efficiency.</p>
+            </div>
+
+            <div class="feature-card tilt-card" data-reveal>
+              <div class="feature-icon">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                  <path d="M4 18V9L11 4L18 9V18H13V13H9V18H4Z" stroke="currentColor" stroke-width="1.4"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+              <h3>Autonomous Navigation</h3>
+              <p>Robots plan and execute cleaning routes independently, adapting to panel layout and weather conditions.
+              </p>
+            </div>
+
+            <div class="feature-card tilt-card" data-reveal>
+              <div class="feature-icon">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                  <circle cx="11" cy="11" r="7.5" stroke="currentColor" stroke-width="1.4" />
+                  <path d="M11 6.5V11L14 13" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
+                </svg>
+              </div>
+              <h3>24/7 Operation</h3>
+              <p>Scheduled or on-demand cleaning cycles run day and night without any manual intervention.</p>
+            </div>
+
+            <div class="feature-card tilt-card" data-reveal>
+              <div class="feature-icon">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                  <path d="M4 11C4 7.13 7.13 4 11 4C14.87 4 18 7.13 18 11" stroke="currentColor" stroke-width="1.4"
+                    stroke-linecap="round" />
+                  <path d="M4 11C4 14.87 7.13 18 11 18C14.87 18 18 14.87 18 11" stroke="currentColor" stroke-width="1.4"
+                    stroke-linecap="round" stroke-dasharray="2 3" />
+                </svg>
+              </div>
+              <h3>Water-Efficient Cleaning</h3>
+              <p>Precision spray and brush systems use a fraction of the water required by manual cleaning crews.</p>
+            </div>
+
+            <div class="feature-card tilt-card" data-reveal>
+              <div class="feature-icon">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                  <rect x="4" y="4" width="14" height="14" rx="3" stroke="currentColor" stroke-width="1.4" />
+                  <path d="M8 11H14M11 8V14" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
+                </svg>
+              </div>
+              <h3>Remote Fleet Monitoring</h3>
+              <p>A live dashboard tracks every unit's status, efficiency, and maintenance needs from anywhere.</p>
+            </div>
+
+            <div class="feature-card tilt-card" data-reveal>
+              <div class="feature-icon">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                  <path
+                    d="M11 3V6M11 16V19M3 11H6M16 11H19M5.5 5.5L7.5 7.5M14.5 14.5L16.5 16.5M5.5 16.5L7.5 14.5M14.5 7.5L16.5 5.5"
+                    stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
+                </svg>
+              </div>
+              <h3>Adaptive to Any Site</h3>
+              <p>From rooftop arrays to utility-scale farms, VEGA systems configure to the plant's layout and scale.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ ABOUT ============ -->
+      <section class="about" id="about">
+        <div class="section-inner">
+          <div class="about-grid">
+            <div class="about-visual" data-reveal>
+              <div class="about-frame">
+                <!-- Add Image URL -->
+                <img src="imgs/group.png" alt="VEGA Robotics facility" class="about-img">
+
+              </div>
+              <div class="about-frame-glow"></div>
+              <div class="orbit-ring"></div>
+            </div>
+
+            <div class="about-copy" data-reveal>
+              <p class="eyebrow"><span class="eyebrow-dot"></span>OUR STORY</p>
+              <h2 class="section-title">Built to keep the sun's<br>promise honest</h2>
+              <p class="about-text">
+                VEGA ROBOTICS began with a broader question: what happens to solar panels at the
+                end of their life? While researching solar panels and their recycling process,
+                we discovered that one of the biggest challenges actually begins much earlier —
+                keeping panels clean. Dust and dirt continuously reduce panel performance, while
+                regular cleaning can be time-consuming, labor-intensive, and difficult to manage at scale.
+              </p>
+              <p class="about-text">
+                We also found that solar cleaning robots already exist, but many are too expensive
+                for farmers and smaller solar installations. That led us to a simple goal: build a more
+                affordable and practical robotic cleaning solution that makes automated solar panel
+                cleaning accessible to more people. We started with a simple mechanical system, focusing
+                on reliability and real-world testing first — and we'll keep improving it as we learn
+                from every test.
+              </p>
+
+              <div class="values-list">
+                <div class="value-item">
+                  <span class="value-num">01</span>
+                  <div>
+                    <h4>Mission</h4>
+                    <p>Eliminate energy loss from soiling across every solar installation on earth.</p>
+                  </div>
+                </div>
+                <div class="value-item">
+                  <span class="value-num">02</span>
+                  <div>
+                    <h4>Vision</h4>
+                    <p>A future where solar installations can be maintained with minimal human effort and maximum reliability.</p>
+                  </div>
+                </div>
+                <div class="value-item">
+                  <span class="value-num">03</span>
+                  <div>
+                    <h4>Approach</h4>
+                    <p>Practical robotics, efficient mechanical design, real-world testing, and continuous improvement —
+                      starting simple and building smarter with every iteration.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stats-grid" data-reveal>
+            <div class="stat-card tilt-card">
+              <span class="stat-num-text">High Capacity</span>
+              <p class="stat-label">Extended Operation</p>
+            </div>
+            <div class="stat-card tilt-card">
+              <span class="stat-num" data-count="99" data-suffix="%">0</span>
+              <p class="stat-label">Cleaning Efficiency</p>
+            </div>
+            <div class="stat-card tilt-card">
+              <span class="stat-num-text">24/7</span>
+              <p class="stat-label">Automation</p>
+            </div>
+            <div class="stat-card tilt-card">
+              <span class="stat-num-text">Affordable</span>
+              <p class="stat-label">Built for Accessibility</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ PRODUCTS ============ -->
+      <section class="products" id="products">
+        <div class="section-inner">
+          <div class="section-head" data-reveal>
+            <p class="eyebrow center"><span class="eyebrow-dot"></span>OUR PRODUCT</p>
+            <h2 class="section-title center">One machine.<br><span class="text-gradient">One mission.</span></h2>
+          </div>
+
+          <div class="product-grid single">
+            <article class="product-card tilt-card" data-reveal>
+              <div class="product-card-glow"></div>
+              <div class="product-media">
+                <!-- Add Image URL -->
+                <img src="imgs/robo1.jpeg" alt="Semi-Automated Solar Cleaning Robot" class="product-img">
+
+                <span class="product-tag">FULLY AUTOMATED</span>
+              </div>
+              <div class="product-body">
+                <h3>VEGA S1</h3>
+                <p class="product-desc">Fully Automated Solar Cleaning Robot built for small and mid-size installations
+                  that need reliable, guided cleaning cycles.</p>
+                <ul class="product-features">
+                  <li>Rail-guided cleaning path</li>
+                  <li>Autonomous fleet coordination</li>
+                  <li>Ideal for rooftop &amp; small-scale plants</li>
+                </ul>
+                <a href="product-s1.html" class="btn btn-outline magnetic"><span>Learn More</span></a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ PROJECTS ============ -->
+      <section class="projects" id="projects">
+        <div class="section-inner">
+          <div class="section-head" data-reveal>
+            <p class="eyebrow center"><span class="eyebrow-dot"></span>FIELD DEPLOYMENTS</p>
+            <h2 class="section-title center">Proven in<br><span class="text-gradient">the field.</span></h2>
+          </div>
+
+          <div class="timeline">
+            <div class="timeline-line"><span class="timeline-line-fill"></span></div>
+
+            <div class="timeline-item" data-reveal>
+              <div class="timeline-marker"></div>
+              <div class="timeline-card tilt-card">
+                <span class="timeline-date">PHASE 01</span>
+                <div class="timeline-media">
+                  <!-- Add Image URL -->
+                  <img src="imgs/pilot.png" alt="Pilot deployment" class="timeline-img">
+
+                </div>
+                <h3>Pilot Deployment</h3>
+                <p>First VEGA S1 units deployed across a rooftop commercial array to validate cleaning efficiency in
+                  real conditions.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item" data-reveal>
+              <div class="timeline-marker"></div>
+              <div class="timeline-card tilt-card">
+                <span class="timeline-date">PHASE 02</span>
+                <div class="timeline-media">
+                  <!-- Add Image URL -->
+                  <img src="imgs/trial.png" alt="Utility scale trial" class="timeline-img">
+
+                </div>
+                <h3>Utility-Scale Trial</h3>
+                <p>Real-world testing of our robot across large solar installations to validate cleaning performance,
+                   reliability, and efficiency.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item" data-reveal>
+              <div class="timeline-marker"></div>
+              <div class="timeline-card tilt-card">
+                <span class="timeline-date">PHASE 03</span>
+                <div class="timeline-media">
+                  <!-- Add Image URL -->
+                  <img src="imgs/trial2.png" alt="Continuous operation" class="timeline-img">
+
+                </div>
+                <h3>Continuous Operation</h3>
+                <p>Year-round autonomous operation across seasons, proving reliability in dust, heat, and monsoon
+                  conditions.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ SUPPORTERS ============ -->
+      <!-- <section class="supporters" id="supporters">
+        <div class="section-inner">
+          <p class="eyebrow center" data-reveal><span class="eyebrow-dot"></span>BACKED BY</p>
+          <h2 class="section-title center" data-reveal>Trusted by innovators<br>and industry leaders.</h2>
+
+          <div class="logo-grid" data-reveal>
+            <div class="logo-cell">
+              <img src="imgs/supp1.png" alt="Supporter 1">
+            </div>
+            <div class="logo-cell">
+              <img src="imgs/supp2.png" alt="Supporter 1">
+            </div>
+            <div class="logo-cell">
+              <img src="imgs/supp3.png" alt="Supporter 1">
+            </div>
+            <div class="logo-cell">
+              <img src="imgs/supp4.png" alt="Supporter 1">
+            </div>
+            <div class="logo-cell">
+              <img src="imgs/supp5.png" alt="Supporter 1">
+            </div>
+            <div class="logo-cell">
+              <img src="imgs/supp6.png" alt="Supporter 1">
+            </div>
+          </div>
+        </div>
+      </section> -->
+
+      <!-- ============ CONTACT — reference-style solid band ============ -->
+      <section class="contact" id="contact">
+        <div class="section-inner">
+          <div class="contact-grid">
+            <div class="contact-copy" data-reveal>
+              <p class="eyebrow"><span class="eyebrow-dot"></span>GET IN TOUCH</p>
+              <h2 class="section-title">Get in Touch</h2>
+
+              <div class="contact-address-list">
+                <div class="contact-address-block">
+                  <h4>Office</h4>
+                  <!-- Add Office Address — placeholder below, edit anytime -->
+                  <p>VEGA Robotics Pvt. Ltd.,<br>
+                    505 , Surya Apartment,<br>
+                    Near JSPM NTC College,<br>
+                    Pune, Maharashtra – 411041</p> <br>
+
+                </div>
+
+                 <div class="contact-address-block">
+                  <h4>Contact</h4>
+
+                  <p>vegarobotics1@gmail.com<br>
+                    +91 95299 48058<br>
+                    <br>
+                    Pune, Maharashtra – 41041</p>
+                </div>
+
+              </div>
+            </div>
+
+            <form class="contact-form" id="contactForm" data-reveal>
+              <div class="form-group">
+                <input type="text" id="name" name="name" required placeholder="Name">
+              </div>
+              <div class="form-group">
+                <input type="text" id="address" name="address" placeholder="Address">
+              </div>
+              <div class="form-group">
+                <input type="email" id="email" name="email" required placeholder="Email">
+              </div>
+              <div class="form-group">
+                <input type="tel" id="phone" name="phone" placeholder="Phone">
+              </div>
+              <div class="form-group">
+                <textarea id="message" name="message" rows="5" required
+                  placeholder="Type your message here..."></textarea>
+              </div>
+              <button type="submit" class="btn form-submit magnetic">
+                <span>Submit</span>
+              </button>
+              <p class="form-note" id="formNote"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+      <div class="section-inner footer-inner">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a href="#home" class="nav-logo">
+              <span class="nav-logo-icon"><img src="imgs/logo.jpeg" alt="VEGA Robotics" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></span>
+              <span class="nav-logo-text">VEGA<span>ROBOTICS</span></span>
+            </a>
+            <p>Autonomous robots for a cleaner, more efficient solar grid.</p>
+          </div>
+
+          <div class="footer-links">
+            <div class="footer-col">
+              <h5>Company</h5>
+              <a href="#about">About</a>
+              <a href="#features">Features</a>
+              <a href="#products">Products</a>
+              <a href="#projects">Projects</a>
+            </div>
+            <div class="footer-col">
+              <h5>Connect</h5>
+              <a href="#supporters">Supporters</a>
+              <a href="#contact">Contact</a>
+              <a href="#home">Home</a>
+            </div>
+            <div class="footer-col">
+              <h5>Newsletter</h5>
+              <form class="newsletter-form" id="newsletterForm">
+                <input type="email" placeholder="Your email" required>
+                <button type="submit" aria-label="Subscribe">
+                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                    <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; <span id="year"></span> VEGA Robotics. All rights reserved.</p>
+          <div class="social-row small">
+            <a href="#" class="social-icon magnetic" aria-label="LinkedIn">in</a>
+            <a href="#" class="social-icon magnetic" aria-label="Twitter">X</a>
+            <a href="#" class="social-icon magnetic" aria-label="Instagram">ig</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <button class="back-to-top magnetic" id="backToTop" aria-label="Back to top">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <path d="M8 13V3M3 7L8 2L13 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg>
+    </button>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

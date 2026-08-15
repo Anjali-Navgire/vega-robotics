@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VEGA S1 — Semi-Automated Solar Cleaning Robot | VEGA ROBOTICS</title>
+<meta name="description" content="VEGA S1: a semi-automated solar cleaning robot built for small and mid-size installations.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<div class="site revealed" id="site">
+  <div class="spotlight" id="spotlight"></div>
+
+  <header class="navbar" id="navbar">
+    <div class="navbar-inner">
+      <a href="index.html#home" class="nav-logo">
+        <span class="nav-logo-icon"><img src="imgs/logo.jpeg" alt="VEGA Robotics" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></span>
+        <span class="nav-logo-text">VEGA<span>ROBOTICS</span></span>
+      </a>
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html#home" class="nav-link">Home</a>
+        <a href="index.html#features" class="nav-link">Features</a>
+        <a href="index.html#about" class="nav-link">About</a>
+        <a href="index.html#products" class="nav-link active">Products</a>
+        <a href="index.html#projects" class="nav-link">Projects</a>
+        <a href="index.html#supporters" class="nav-link">Supporters</a>
+        <a href="index.html#contact" class="nav-link">Contact</a>
+      </nav>
+      <a href="index.html#contact" class="btn btn-cta nav-cta magnetic"><span>Get Started</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="product-hero">
+      <div class="section-inner">
+        <a href="index.html#products" class="other-product-link" style="margin-top:0; margin-bottom:30px; display:inline-flex;">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M13 8H3M3 8L7 4M3 8L7 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Back to Products
+        </a>
+        <div class="product-hero-grid">
+          <div data-reveal>
+            <p class="eyebrow"><span class="eyebrow-dot"></span>SEMI-AUTOMATED</p>
+            <h1 class="section-title">VEGA S1</h1>
+            <p class="about-text" style="margin-top:18px;">
+              A semi-automated solar cleaning robot designed for small and mid-size
+              installations. VEGA S1 runs guided cleaning cycles along a fixed rail
+              path, giving site owners a reliable, low-maintenance way to keep
+              rooftop and small-scale arrays performing at their best.
+            </p>
+            <div class="hero-actions" style="margin-top:30px;">
+              <a href="index.html#contact" class="btn btn-primary magnetic"><span>Request a Quote</span></a>
+            </div>
+          </div>
+          <div class="product-hero-media tilt-card" data-reveal>
+            <!-- Add Image URL -->
+            <img src="imgs/robo1.jpeg" alt="VEGA S1 solar cleaning robot">
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-spec-section">
+      <div class="section-inner">
+        <p class="eyebrow" data-reveal><span class="eyebrow-dot"></span>SPECIFICATIONS</p>
+        <h2 class="section-title" data-reveal>Reliable cleaning,<br><span class="text-gradient">simple to operate.</span></h2>
+
+        <div class="spec-grid">
+          <div class="spec-card tilt-card" data-reveal>
+            <h4>PANEL COVERAGE</h4>
+            <p>Up to 500 kW</p>
+          </div>
+          <div class="spec-card tilt-card" data-reveal>
+            <h4>CLEANING CYCLE</h4>
+            <p>~20 min / row</p>
+          </div>
+          <div class="spec-card tilt-card" data-reveal>
+            <h4>OPERATION MODE</h4>
+            <p>Manual + Scheduled</p>
+          </div>
+          <div class="spec-card tilt-card" data-reveal>
+            <h4>GUIDANCE</h4>
+            <p>Fixed Rail Path</p>
+          </div>
+          <div class="spec-card tilt-card" data-reveal>
+            <h4>POWER SOURCE</h4>
+            <p>Grid / Solar-Assist</p>
+          </div>
+          <div class="spec-card tilt-card" data-reveal>
+            <h4>WATER USE</h4>
+            <p>Low, Brush-Assisted</p>
+          </div>
+        </div>
+
+        <p class="eyebrow" data-reveal><span class="eyebrow-dot"></span>BEST SUITED FOR</p>
+        <div class="product-use-cases" data-reveal>
+          <div class="use-case-item"><span>01</span><p>Rooftop commercial and residential solar installations.</p></div>
+          <div class="use-case-item"><span>02</span><p>Small-scale ground-mount plants with predictable panel rows.</p></div>
+          <div class="use-case-item"><span>03</span><p>Sites that want automation without a full utility-scale investment.</p></div>
+        </div>
+
+        <div class="product-cta-band tilt-card" data-reveal>
+          <div>
+            <h3 style="font-family:var(--font-display); font-size:1.3rem; margin-bottom:6px;">Ready to see VEGA S1 on your site?</h3>
+            <p style="color:var(--white-faint); font-size:.9rem;">Talk to our team about deployment timelines and pricing.</p>
+          </div>
+          <a href="index.html#contact" class="btn btn-primary magnetic"><span>Get in Touch</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="section-inner footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html#home" class="nav-logo">
+            <span class="nav-logo-icon"><img src="imgs/logo.jpeg" alt="VEGA Robotics" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></span>
+            <span class="nav-logo-text">VEGA<span>ROBOTICS</span></span>
+          </a>
+          <p>Autonomous robots for a cleaner, more efficient solar grid.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h5>Company</h5>
+            <a href="index.html#about">About</a>
+            <a href="index.html#features">Features</a>
+            <a href="index.html#products">Products</a>
+            <a href="index.html#projects">Projects</a>
+          </div>
+          <div class="footer-col">
+            <h5>Connect</h5>
+            <a href="index.html#supporters">Supporters</a>
+            <a href="index.html#contact">Contact</a>
+            <a href="index.html#home">Home</a>
+          </div>
+          <div class="footer-col">
+            <h5>Product</h5>
+            <a href="product-s1.html">VEGA S1</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> VEGA Robotics. All rights reserved.</p>
+        <div class="social-row small">
+          <a href="#" class="social-icon magnetic" aria-label="LinkedIn">in</a>
+          <a href="#" class="social-icon magnetic" aria-label="Twitter">X</a>
+          <a href="#" class="social-icon magnetic" aria-label="Instagram">ig</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top magnetic" id="backToTop" aria-label="Back to top">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 13V3M3 7L8 2L13 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
