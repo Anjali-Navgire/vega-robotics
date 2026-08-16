@@ -982,6 +982,15 @@ ul{ list-style:none; }
    SOCIAL ICONS (used in footer)
    ========================================================================== */
 .social-row{ display:flex; gap:12px; flex-wrap: wrap; }
+.social-row.small{
+  justify-content: flex-start;
+  margin-top: 14px;
+}
+.social-row.small .social-icon{
+  width: 32px;
+  height: 32px;
+  font-size: .62rem;
+}
 .social-icon{
   width:36px; height:36px;
   border-radius:50%;
@@ -1086,7 +1095,7 @@ ul{ list-style:none; }
 
 /* ---- Mobile hero: full-bleed image on top, centered content below ---- */
 @media (max-width: 860px){
-  .hero{ padding: 128px 0 60px; }
+  .hero{ padding: 108px 0 60px; }
   .hero-inner{
     padding: 0;
     display: flex;
@@ -1096,21 +1105,21 @@ ul{ list-style:none; }
   }
   .hero-visual{
     order: -1;
-    width: 100vw;
-    max-width: 100vw;
-    margin: 0 0 32px;
-    /* break out of the padded container so the image runs edge-to-edge */
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
-    height: min(56vw, 340px);
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    margin: 0 0 36px;
+    padding: 0 16px;
   }
   .hero-visual-frame{
     width: 100%;
     height: 100%;
     max-width: 100%;
-    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+    border-radius: var(--radius-lg);
     box-shadow: none;
   }
+  .hero-robot-img{ object-position: center 35%; }
   .hero-title, .hero-sub{
     padding: 0 24px;
     margin-left: auto;
@@ -1131,6 +1140,10 @@ ul{ list-style:none; }
   /* the scroll indicator was overlapping the stats row on short mobile
      viewports — drop it on mobile since there's nothing to signal here */
   .hero .scroll-indicator{ display: none; }
+}
+
+@media (max-width: 480px){
+  .hero-visual{ aspect-ratio: 1 / 1.05; }
 }
 
 @media (max-width: 860px){
@@ -1197,6 +1210,7 @@ ul{ list-style:none; }
   .contact-copy .eyebrow{ justify-content: center; }
   .contact-address-list{ align-items: center; }
   .contact-address-block{ width: 100%; }
+  .contact-address-block .social-row{ justify-content: center; }
   .contact-form{ width: 100%; max-width: 480px; }
 }
 
@@ -1217,9 +1231,6 @@ ul{ list-style:none; }
   .hero-actions{ flex-direction:column; align-items:stretch; }
   .hero-actions .btn{ justify-content:center; }
   .hero-stats{ gap: 18px; }
-  .hero-visual{ height: 320px; }
-  .hero-visual-frame{ width: min(230px, 78vw); height: min(300px, 42vh); }
-
   .features, .about, .products, .projects, .supporters{ padding: 40px 0 60px; }
   .section-head{ margin-bottom: 40px; }
 
@@ -1249,7 +1260,6 @@ ul{ list-style:none; }
 @media (max-width: 380px){
   .hero-title{ font-size: 2.1rem; }
   .section-title{ font-size: 1.7rem; }
-  .hero-visual-frame{ width: min(200px, 76vw); height: min(260px, 38vh); }
   .intro-logo-wrap{ width: 140px; height: 140px; }
   .intro-logo{ width: 118px; height: 118px; }
   .intro-logo-mark{ font-size: 2.7rem; }
@@ -1264,6 +1274,4 @@ ul{ list-style:none; }
   .intro-logo{ width: 100px; height: 100px; }
   .intro-logo-mark{ font-size: 2.2rem; }
   .intro-content{ gap: 16px; }
-
 }
-
